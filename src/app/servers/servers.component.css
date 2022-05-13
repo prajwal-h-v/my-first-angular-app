@@ -1,0 +1,15 @@
+p {
+  margin: 0.5em;
+  padding: 1em;
+}
+button {
+  margin: 1em;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: whitesmoke;
+}

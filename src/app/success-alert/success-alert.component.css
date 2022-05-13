@@ -1,0 +1,10 @@
+p {
+  background-color: palegreen;
+  padding: 1em;
+  border: 1px solid darkgreen;
+  color: darkgreen;
+}
+p::selection {
+  background-color: darkgreen;
+  color: palegreen;
+}

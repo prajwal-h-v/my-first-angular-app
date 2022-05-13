@@ -1,0 +1,30 @@
+p {
+  padding: 1em;
+  background-color: oldlace;
+  border: 1px solid rosybrown;
+  color: rosybrown;
+}
+.content {
+  background-color: silver;
+}
+
+.running {
+  background-color: lemonchiffon;
+  border: 1px solid green;
+  color: green;
+}
+.offline {
+  background-color: mistyrose;
+  border: 1px solid tomato;
+  color: tomato;
+}
+.running::selection {
+  background-color: green;
+
+  color: lemonchiffon;
+}
+.offline::selection {
+  background-color: tomato;
+
+  color: mistyrose;
+}

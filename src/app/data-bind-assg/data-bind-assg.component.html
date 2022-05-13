@@ -1,0 +1,14 @@
+<div class="content">
+  <input
+    type="text"
+    placeholder="Username"
+    class="form-control"
+    (input)="onNameEntered($event)"
+    [(ngModel)]="userName"
+  />
+  <p>{{ userName }}</p>
+
+  <button class="btn btn-success" [disabled]="ifNameEmpty" (click)="onSubmit()">
+    Add name
+  </button>
+</div>
