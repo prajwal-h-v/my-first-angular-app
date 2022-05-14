@@ -7,17 +7,60 @@
 <!-- * * * * * * * to get started with your project! * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <div class="container">
-  <div class="row">
-    <div class="col-xs-12">
-      <!-- <h3>In the application</h3>
+  <app-cockpit
+    (serverCreated)="onServerAdded($event)"
+    (blueprintCreated)="onBlueprintAdded($event)"
+  ></app-cockpit>
+  <hr />
+  <app-server-element
+    *ngFor="let serverElement of serverElements"
+    [srvElement]="serverElement"
+  >
+    <p #contentParagraph>
+      <strong *ngIf="serverElement.type === 'server'" style="color: tomato"
+        >{{ serverElement.content }}
+      </strong>
+      <em *ngIf="serverElement.type === 'blueprint'">
+        {{ serverElement.content }}
+      </em>
+    </p></app-server-element
+  >
+  <hr />
+  <!-- <div class="row">
+    <div class="col-md-12">
+      <h3>In the application</h3>
       <hr />
       <app-servers></app-servers>
       <hr />
       <app-warning-alert></app-warning-alert>
       <app-success-alert></app-success-alert>
       <hr />
-      <app-data-bind-assg></app-data-bind-assg> -->
+      <app-data-bind-assg></app-data-bind-assg>
+      <hr />
       <app-dir-assg></app-dir-assg>
+      <hr />
+    </div>
+  </div> -->
+  <hr />
+  <div class="row">
+    <div class="col-ms-12">
+      <app-game-control
+        (intervalFired)="onIntervalFired($event)"
+      ></app-game-control>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <app-odd
+        *ngFor="let oddNumber of oddNumbers"
+        [number]="oddNumber"
+      ></app-odd>
+    </div>
+    <div class="col-md-6">
+      <app-even
+        *ngFor="let evenNumber of evenNumbers"
+        [number]="evenNumber"
+      ></app-even>
     </div>
   </div>
 </div>
